@@ -1,0 +1,15 @@
+.Rproj.user
+.Rhistory
+.Renviron
+.RData
+.Ruserdata
+.Rdata
+.httr-oauth
+.DS_Store
+.docx
+README.docx
+renv
+.zonarCache
+checkpoint.RData
+inst/doc
+todo.R

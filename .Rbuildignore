@@ -1,0 +1,17 @@
+^renv$
+^renv\.lock$
+^.*\.Rproj$
+^\.Rproj\.user$
+^_pkgdown\.yml$
+^docs$
+^pkgdown$
+^README\.Rmd$
+^README\.md$
+^README\.html$
+^README\.docx$
+desktop.ini
+.zonarCache
+.zonarCache/.*
+.nojekyll
+checkpoint.RData
+^data-raw$
