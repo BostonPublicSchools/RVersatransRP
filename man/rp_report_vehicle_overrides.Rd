@@ -6,7 +6,7 @@
 \usage{
 rp_report_vehicle_overrides(
   rp_odbc_name = Sys.getenv("RP_ODBC_NAME"),
-  database = "Onscreen021919",
+  database = Sys.getenv("OS_DATABASE"),
   TZ = Sys.timezone(),
   conn = NULL
 )

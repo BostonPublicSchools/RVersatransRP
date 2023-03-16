@@ -14,8 +14,8 @@
     post-processing and storage tasks.">
 <title>Retrieve and format data from a Versatrans Routing and Planning Database. • RVersatransRP</title>
 <script src="deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link href="deps/bootstrap-5.1.3/bootstrap.min.css" rel="stylesheet">
-<script src="deps/bootstrap-5.1.3/bootstrap.bundle.min.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
+<link href="deps/bootstrap-5.2.2/bootstrap.min.css" rel="stylesheet">
+<script src="deps/bootstrap-5.2.2/bootstrap.bundle.min.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
 <!-- bootstrap-toc --><script src="https://cdn.jsdelivr.net/gh/afeld/bootstrap-toc@v1.0.1/dist/bootstrap-toc.min.js" integrity="sha256-4veVQbu7//Lk5TSmc7YV48MxtMy98e26cf5MrgZYnwo=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><script src="pkgdown.js"></script><meta property="og:title" content="Retrieve and format data from a Versatrans Routing and Planning Database.">
 <meta property="og:description" content="Versatrans Routing and Planning databases can be queried directly
@@ -55,7 +55,14 @@
         <input type="search" class="form-control me-sm-2" aria-label="Toggle navigation" name="search-input" data-search-index="search.json" id="search-input" placeholder="Search for" autocomplete="off">
 </form>
 
-      <ul class="navbar-nav"></ul>
+      <ul class="navbar-nav">
+<li class="nav-item">
+  <a class="external-link nav-link" href="https://github.com/BostonPublicSchools/RVersatransRP/" aria-label="github">
+    <span class="fab fa fab fa-github fa-lg"></span>
+     
+  </a>
+</li>
+      </ul>
 </div>
 
     
@@ -67,86 +74,61 @@
 </h1></div>
 <!-- badges: start -->
 <!-- badges: end -->
-<p>The goal of RVersatransRP is to provide easy to use functions for querying and formatting data from a Versatrans Routing &amp; Planning database.</p>
+<p>RVersatransRP provides easy to use functions for querying and formatting data from a Versatrans Routing &amp; Planning database.</p>
 <div class="section level2">
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
 </h2>
-<p>RVersatransRP is currently available from our <a href="https://drive.google.com/drive/folders/1e_C8c5epf8IqcKyP4g9TzaFm1Vnlr8wM?usp=sharing" class="external-link">shared Google Drive folder</a>. I don’t think there is any easy way to install or update directly from there, so you will need to download/sync this shared drive to your local disk and install from there. Once you have downloaded/synced the drive directory you can install this package with</p>
+<p>The development verions of RVersatransRP is currently available from GitHub:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_local.html" class="external-link">install_local</a></span><span class="op">(</span><span class="st">"path/to/directory"</span><span class="op">)</span></span></code></pre></div>
-<p>Eventually we will move this package to Github so you can install the development version of RVersatransRP from <a href="https://github.com/" class="external-link">GitHub</a> with:</p>
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co"># install.packages("devtools")</span></span>
-<span><span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">".../RVersatransRP"</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="co"># install.packages("devtools") </span></span>
+<span><span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"BostonPublicSchools/RVersatransRP"</span><span class="op">)</span></span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="example">Example<a class="anchor" aria-label="anchor" href="#example"></a>
 </h2>
 <p>This is a basic example which shows you how to retrieve the student monitor file from the Versatrans RP database:</p>
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">RVersatransRP</span><span class="op">)</span></span>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/BostonPublicSchools/RVersatransRP" class="external-link">RVersatransRP</a></span><span class="op">)</span> <span class="co">## or source("RVersatransRP/R/monitors_student_file.R")</span></span>
 <span></span>
 <span><span class="va">student_monitor</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/rp_report_student_monitor.html">rp_report_student_monitor</a></span><span class="op">(</span>database <span class="op">=</span> <span class="st">"Sandbox"</span>, format <span class="op">=</span> <span class="st">"long"</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co">## example pickup data:</span></span>
-<span><span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html" class="external-link">glimpse</a></span><span class="op">(</span></span>
-<span><span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html" class="external-link">select</a></span><span class="op">(</span></span>
-<span>  <span class="va">student_monitor</span>,</span>
-<span>  <span class="op">-</span><span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://tidyselect.r-lib.org/reference/starts_with.html" class="external-link">contains</a></span><span class="op">(</span><span class="st">"ID"</span><span class="op">)</span>, <span class="op">-</span><span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://tidyselect.r-lib.org/reference/starts_with.html" class="external-link">contains</a></span><span class="op">(</span><span class="st">"Last"</span><span class="op">)</span>, <span class="op">-</span><span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://tidyselect.r-lib.org/reference/starts_with.html" class="external-link">contains</a></span><span class="op">(</span><span class="st">"First"</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span>
-<span><span class="co">#&gt; Rows: 207,702</span></span>
-<span><span class="co">#&gt; Columns: 10</span></span>
-<span><span class="co">#&gt; $ `Program Description`  &lt;chr&gt; "DR DOOR FULL DAY", "DR DOOR FULL DAY", "DR DOO…</span></span>
-<span><span class="co">#&gt; $ `INFO WC`              &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,…</span></span>
-<span><span class="co">#&gt; $ `INFO NEED MONITOR`    &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,…</span></span>
-<span><span class="co">#&gt; $ `School Abbrev`        &lt;chr&gt; "0335", "0335", "0420", "0420", "0420", "0420",…</span></span>
-<span><span class="co">#&gt; $ `School Anchor Abbrev` &lt;chr&gt; "0335", "0335", "0420", "0420", "0420", "0420",…</span></span>
-<span><span class="co">#&gt; $ `School Name`          &lt;chr&gt; "Farr Acad", "Farr Acad", "LANDMARK HS", "LANDM…</span></span>
-<span><span class="co">#&gt; $ Day                    &lt;chr&gt; NA, NA, "M", "M", "T", "T", "W", "W", "H", "H",…</span></span>
-<span><span class="co">#&gt; $ Shift                  &lt;chr&gt; "Pickup", "Dropoff", "Pickup", "Dropoff", "Pick…</span></span>
-<span><span class="co">#&gt; $ Route                  &lt;chr&gt; NA, NA, "04201451", "04200451", "04201451", "04…</span></span>
-<span><span class="co">#&gt; $ Bus                    &lt;chr&gt; NA, NA, "7D036", "7D036", "7D036", "7D036", "7D…</span></span></code></pre></div>
-<p>Use <code>format = wide</code> for full compatibility with the monitor student file produced by RP export:</p>
-<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">RVersatransRP</span><span class="op">)</span></span>
-<span></span>
-<span><span class="va">student_monitor</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/rp_report_student_monitor.html">rp_report_student_monitor</a></span><span class="op">(</span>database <span class="op">=</span> <span class="st">"Sandbox"</span>, format <span class="op">=</span> <span class="st">"wide"</span><span class="op">)</span></span>
-<span></span>
-<span><span class="co">## example pickup data:</span></span>
-<span><span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html" class="external-link">glimpse</a></span><span class="op">(</span></span>
-<span><span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html" class="external-link">select</a></span><span class="op">(</span></span>
-<span>  <span class="va">student_monitor</span>,</span>
-<span>  <span class="op">-</span><span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://tidyselect.r-lib.org/reference/starts_with.html" class="external-link">contains</a></span><span class="op">(</span><span class="st">"ID"</span><span class="op">)</span>, <span class="op">-</span><span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://tidyselect.r-lib.org/reference/starts_with.html" class="external-link">contains</a></span><span class="op">(</span><span class="st">"Last"</span><span class="op">)</span>, <span class="op">-</span><span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://tidyselect.r-lib.org/reference/starts_with.html" class="external-link">contains</a></span><span class="op">(</span><span class="st">"First"</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span>
-<span><span class="co">#&gt; Rows: 21,421</span></span>
-<span><span class="co">#&gt; Columns: 26</span></span>
-<span><span class="co">#&gt; $ `Program Description`  &lt;chr&gt; "DR DOOR FULL DAY", "DR DOOR FULL DAY", "DR DOO…</span></span>
-<span><span class="co">#&gt; $ `INFO WC`              &lt;chr&gt; NA, NA, NA, NA, NA, NA, "WC", NA, NA, NA, NA, N…</span></span>
-<span><span class="co">#&gt; $ `INFO NEED MONITOR`    &lt;chr&gt; NA, NA, "M", "M", NA, NA, "1", NA, "M", NA, NA,…</span></span>
-<span><span class="co">#&gt; $ `School Abbrev`        &lt;chr&gt; "0335", "0420", NA, "0641", "0517", "0292", "06…</span></span>
-<span><span class="co">#&gt; $ `School Anchor Abbrev` &lt;chr&gt; "0335", "0420", NA, "0641", "0517", "0292", "06…</span></span>
-<span><span class="co">#&gt; $ `School Name`          &lt;chr&gt; "Farr Acad", "LANDMARK HS", "CENTRAL MA PREP CO…</span></span>
-<span><span class="co">#&gt; $ `Mon. Pickup Bus`      &lt;chr&gt; NA, "7D036", NA, "MS012", NA, NA, "WB960", "7D0…</span></span>
-<span><span class="co">#&gt; $ `Mon. Pickup Route`    &lt;chr&gt; NA, "04201451", NA, "06411451", NA, NA, "065925…</span></span>
-<span><span class="co">#&gt; $ `Mon. Dropoff Bus`     &lt;chr&gt; NA, "7D036", NA, "MS012", NA, NA, "WB960", "7D0…</span></span>
-<span><span class="co">#&gt; $ `Mon. Dropoff Route`   &lt;chr&gt; NA, "04200451", NA, "06419451", NA, NA, "065995…</span></span>
-<span><span class="co">#&gt; $ `Tue. Pickup Bus`      &lt;chr&gt; NA, "7D036", NA, "MS012", NA, NA, "WB960", "7D0…</span></span>
-<span><span class="co">#&gt; $ `Tue. Pickup Route`    &lt;chr&gt; NA, "04201451", NA, "06411451", NA, NA, "065925…</span></span>
-<span><span class="co">#&gt; $ `Tue. Dropoff Bus`     &lt;chr&gt; NA, "7D036", NA, "MS012", NA, NA, "WB960", "7D0…</span></span>
-<span><span class="co">#&gt; $ `Tue. Dropoff Route`   &lt;chr&gt; NA, "04200451", NA, "06419451", NA, NA, "065995…</span></span>
-<span><span class="co">#&gt; $ `Wed. Pickup Bus`      &lt;chr&gt; NA, "7D036", NA, "MS012", NA, NA, "WB960", "7D0…</span></span>
-<span><span class="co">#&gt; $ `Wed. Pickup Route`    &lt;chr&gt; NA, "04201451", NA, "06411451", NA, NA, "065925…</span></span>
-<span><span class="co">#&gt; $ `Wed. Dropoff Bus`     &lt;chr&gt; NA, "7D036", NA, "MS012", NA, NA, "WB960", "7D0…</span></span>
-<span><span class="co">#&gt; $ `Wed. Dropoff Route`   &lt;chr&gt; NA, "04200451", NA, "06419451", NA, NA, "065995…</span></span>
-<span><span class="co">#&gt; $ `Thu. Pickup Bus`      &lt;chr&gt; NA, "7D036", NA, "MS012", NA, NA, "WB960", "7D0…</span></span>
-<span><span class="co">#&gt; $ `Thu. Pickup Route`    &lt;chr&gt; NA, "04201451", NA, "06411451", NA, NA, "065925…</span></span>
-<span><span class="co">#&gt; $ `Thu. Dropoff Bus`     &lt;chr&gt; NA, "7D036", NA, "MS012", NA, NA, "WB960", "7D0…</span></span>
-<span><span class="co">#&gt; $ `Thu. Dropoff Route`   &lt;chr&gt; NA, "04200451", NA, "06419451", NA, NA, "065975…</span></span>
-<span><span class="co">#&gt; $ `Fri. Pickup Bus`      &lt;chr&gt; NA, "7D036", NA, "MS012", NA, NA, "WB960", "7D0…</span></span>
-<span><span class="co">#&gt; $ `Fri. Pickup Route`    &lt;chr&gt; NA, "04201451", NA, "06411451", NA, NA, "065925…</span></span>
-<span><span class="co">#&gt; $ `Fri. Dropoff Bus`     &lt;chr&gt; NA, "7D036", NA, "MS012", NA, NA, "WB960", "7D0…</span></span>
-<span><span class="co">#&gt; $ `Fri. Dropoff Route`   &lt;chr&gt; NA, "04200451", NA, "06419451", NA, NA, "065995…</span></span></code></pre></div>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org" class="external-link">dplyr</a></span><span class="op">)</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; Attaching package: 'dplyr'</span></span>
+<span><span class="co">#&gt; The following objects are masked from 'package:stats':</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt;     filter, lag</span></span>
+<span><span class="co">#&gt; The following objects are masked from 'package:base':</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt;     intersect, setdiff, setequal, union</span></span>
+<span><span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html" class="external-link">glimpse</a></span><span class="op">(</span><span class="va">student_monitor</span><span class="op">[</span><span class="fl">0</span>,<span class="op">]</span><span class="op">)</span></span>
+<span><span class="co">#&gt; Rows: 0</span></span>
+<span><span class="co">#&gt; Columns: 13</span></span>
+<span><span class="co">#&gt; $ RecordID               &lt;int&gt; </span></span>
+<span><span class="co">#&gt; $ `Student ID`           &lt;chr&gt; </span></span>
+<span><span class="co">#&gt; $ `Last, First`          &lt;chr&gt; </span></span>
+<span><span class="co">#&gt; $ `Program Description`  &lt;chr&gt; </span></span>
+<span><span class="co">#&gt; $ `INFO WC`              &lt;chr&gt; </span></span>
+<span><span class="co">#&gt; $ `INFO NEED MONITOR`    &lt;chr&gt; </span></span>
+<span><span class="co">#&gt; $ `School Abbrev`        &lt;chr&gt; </span></span>
+<span><span class="co">#&gt; $ `School Anchor Abbrev` &lt;chr&gt; </span></span>
+<span><span class="co">#&gt; $ `School Name`          &lt;chr&gt; </span></span>
+<span><span class="co">#&gt; $ Day                    &lt;chr&gt; </span></span>
+<span><span class="co">#&gt; $ Shift                  &lt;chr&gt; </span></span>
+<span><span class="co">#&gt; $ Route                  &lt;chr&gt; </span></span>
+<span><span class="co">#&gt; $ Bus                    &lt;chr&gt;</span></span></code></pre></div>
 </div>
 </div>
-  </main><aside class="col-md-3"><div class="license">
+  </main><aside class="col-md-3"><div class="links">
+<h2 data-toc-skip>Links</h2>
+<ul class="list-unstyled">
+<li><a href="https://github.com/BostonPublicSchools/RVersatransRP/" class="external-link">Browse source code</a></li>
+<li><a href="https://github.com/BostonPublicSchools/RVersatransRP/issues" class="external-link">Report a bug</a></li>
+</ul>
+</div>
+
+<div class="license">
 <h2 data-toc-skip>License</h2>
 <ul class="list-unstyled">
 <li>What license is it under?</li>

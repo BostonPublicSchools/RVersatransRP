@@ -27,10 +27,5 @@ student_monitor <- rp_report_student_monitor()
 ## data fields:
 dplyr::glimpse(student_monitor[0, ])
 
-## example pickup data:
-dplyr::glimpse(
-dplyr::select(
-  student_monitor,
-  -dplyr::contains("ID"), -dplyr::contains("Last"), -dplyr::contains("First")))
 \dontshow{\}) # examplesIf}
 }
