@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>/404.html</loc>
+    <loc>https://bostonpublicschools.github.io/RVersatransRP/404.html</loc>
   </url>
   <url>
-    <loc>/authors.html</loc>
+    <loc>https://bostonpublicschools.github.io/RVersatransRP/authors.html</loc>
   </url>
   <url>
-    <loc>/index.html</loc>
+    <loc>https://bostonpublicschools.github.io/RVersatransRP/index.html</loc>
   </url>
   <url>
-    <loc>/reference/index.html</loc>
+    <loc>https://bostonpublicschools.github.io/RVersatransRP/reference/index.html</loc>
   </url>
   <url>
-    <loc>/reference/rp_connect.html</loc>
+    <loc>https://bostonpublicschools.github.io/RVersatransRP/reference/rp_connect.html</loc>
   </url>
   <url>
-    <loc>/reference/rp_get_table.html</loc>
+    <loc>https://bostonpublicschools.github.io/RVersatransRP/reference/rp_get_table.html</loc>
   </url>
   <url>
-    <loc>/reference/rp_guess_dsn.html</loc>
+    <loc>https://bostonpublicschools.github.io/RVersatransRP/reference/rp_guess_dsn.html</loc>
   </url>
   <url>
-    <loc>/reference/rp_report_student_monitor.html</loc>
+    <loc>https://bostonpublicschools.github.io/RVersatransRP/reference/rp_report_student_monitor.html</loc>
   </url>
   <url>
-    <loc>/reference/rp_report_vehicle_overrides.html</loc>
+    <loc>https://bostonpublicschools.github.io/RVersatransRP/reference/rp_report_vehicle_overrides.html</loc>
   </url>
 </urlset>

@@ -1,7 +1,7 @@
 Package: RVersatransRP
 Type: Package
 Title: Retrieve and format data from a Versatrans Routing and Planning Database.
-Version: 0.1.0
+Version: 0.2.0.9000
 Author: Ista Zahn
 Maintainer: Ista Zahn <izahn@bostonpublicschools.org>
 Description: Versatrans Routing and Planning databases can be queried directly
